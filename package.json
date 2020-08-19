@@ -1,0 +1,44 @@
+{
+  "name": "hex-api",
+  "version": "1.0.0",
+  "description": "Back-end for a multi-player hex game",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "test": "jest --watch --coverage",
+    "build": "tsc --project ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedwards036/hex-api.git"
+  },
+  "keywords": [
+    "hex",
+    "game",
+    "server",
+    "websocket",
+    "api"
+  ],
+  "author": "Christopher Edwards",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cedwards036/hex-api/issues"
+  },
+  "homepage": "https://github.com/cedwards036/hex-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node12": "^1.0.7",
+    "@types/express": "^4.17.7",
+    "@types/jest": "^26.0.10",
+    "@types/node": "^14.6.0",
+    "@types/supertest": "^2.0.10",
+    "jest": "^26.4.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  }
+}

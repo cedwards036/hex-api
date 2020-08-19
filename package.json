@@ -4,7 +4,8 @@
   "description": "Back-end for a multi-player hex game",
   "main": "dist/index.js",
   "scripts": {
-    "start": "nodemon src/index.ts",
+    "start": "node dist/index.js",
+    "debug": "nodemon src/index.ts",
     "test": "jest --watch --coverage",
     "build": "tsc --project ./"
   },

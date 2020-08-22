@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "debug": "nodemon src/index.ts",
+    "debug": "nodemon -r dotenv/config src/index.ts",
     "test": "jest --watch --coverage",
     "build": "tsc --project ./"
   },
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/cedwards036/hex-api#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.21.5",
     "pg": "^8.3.2"

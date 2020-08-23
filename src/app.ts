@@ -1,6 +1,7 @@
 import express from 'express';
 import { Pool } from 'pg';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 
 const app = express();
 
@@ -9,6 +10,7 @@ const pool = new Pool({
 });
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/', (req, res) => res.status(200).send('Hex server'))
     .get('/db', async (req, res) => {

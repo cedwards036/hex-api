@@ -2,6 +2,7 @@ import express from 'express';
 import { Pool } from 'pg';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import morgan from 'morgan';
 
 const app = express();
 
@@ -10,7 +11,12 @@ const pool = new Pool({
 });
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
+
+if (process.env.NODE_ENV !== 'production') {
+    app.use(morgan('dev'));
+}
 
 app.get('/', (req, res) => res.status(200).send('Hex server'))
     .get('/db', async (req, res) => {
